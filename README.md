@@ -21,7 +21,7 @@
 
 ## 📈 GitHub Stats
 
-![GitHub Stats]( https://github-readme-stats-qf323aaqr-hankenixon456-gmailcoms-projects.vercel.app)  
+![GitHub Stats](https://vercel.com/hankenixon456-gmailcoms-projects/github-readme-stats/tV5zoLtPBNeKnBT8TkEaLYcAD8Ye)  
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=radical)
 
 ## 📫 Connect with Me
