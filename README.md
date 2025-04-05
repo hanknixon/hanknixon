@@ -12,7 +12,7 @@
 - **Web Development:** React (Vite, Tailwind), FastAPI, Node.js
 - **Database & Caching:** MySQL, Redis, MongoDB
 - **AI/ML:** YOLO, LangChain, ChatGPT, Deep Learning
-- **Tools & Platforms:** Google Colab, GitHub, Docker
+- **Tools & Platforms:** Google Collab, GitHub, Docker
 
 ## 🏆 Current Projects
 
