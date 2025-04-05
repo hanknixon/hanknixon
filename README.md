@@ -10,7 +10,7 @@
 
 - **Programming Languages:** Python, JavaScript, C++, C, Java, SQL, Typescript
 - **Web Development:** React (Vite, Tailwind), FastAPI, Node.js
-- **Database & Caching:** MySQL, Redis, MongoDB
+- **Database & Caching:** MySQL, Redis, MongoDB, PostgreSQL
 - **AI/ML:** YOLO, LangChain, ChatGPT, Deep Learning
 - **Tools & Platforms:** Google Collab, GitHub, Docker
 
