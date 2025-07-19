@@ -1,8 +1,8 @@
-# Hi there! 👋 I'm Hank Nixon
+# Hi there! 👋 I'm Hank Emmanuel Nixon
 
 ## 🚀 About Me
 
-🎓 **IT Student | AI/ML Enthusiast | Passionate About Game Developing**  
+🎓 **IT Student At Amal Jyothi College of Engineering | AI/ML Enthusiast | Passionate About Game Developing**  
 💻 **Full-Stack Developer | Backend in Python, Java, C**  
 📚 **Passionate about learning & building AI-powered applications**
 
