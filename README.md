@@ -1,7 +1,6 @@
-# 👋 Hey there, I’m Hank Emmanuel Nixon
+# 👋 Hey there, I’m Hank
 
-> 💡 Full-Stack Engineer • AI/ML Enthusiast • Part-time Designer • Bug-squashing Jedi  
-> Based in India 🇮🇳 | Building things with code, caffeine, and a bit of chaos ☕️💻⚡
+> 💡 Full-Stack Engineer • AI/ML Enthusiast • Part-time Designer 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/hanknixon/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Online-green?style=flat-square&logo=vercel)](https://www.hanknixon.me/)
