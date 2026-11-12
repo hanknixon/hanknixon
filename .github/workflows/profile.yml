@@ -1,0 +1,51 @@
+name: Update profile cards
+
+on:
+  schedule:
+    - cron: "0 3 * * *" # daily, 03:00 UTC
+  workflow_dispatch: # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      # Stats cards. GH_STATS_TOKEN is optional: a classic PAT with `repo` and
+      # `read:user` scopes adds private repos and org work (e.g. Zypher) to the numbers.
+      # Without it, the workflow falls back to GITHUB_TOKEN (public activity only).
+      - name: Stats card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&hide_border=true&bg_color=25252B&title_color=4ADE80&text_color=D1D5DB&icon_color=4ADE80&ring_color=4ADE80&custom_title=GitHub%20stats
+          path: profile/stats.svg
+          token: ${{ secrets.GH_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Top languages card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&hide_border=true&bg_color=25252B&title_color=4ADE80&text_color=D1D5DB&custom_title=Top%20languages
+          path: profile/top-langs.svg
+          token: ${{ secrets.GH_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+
+      # Contribution snake: dark green palette for dark mode, GitHub light palette for light mode.
+      - name: Contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            profile/snake-dark.svg?color_snake=white&color_dots=#2e2e36,#14532d,#166534,#22c55e,#4ade80
+            profile/snake-light.svg?palette=github-light
+
+      - name: Commit cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git commit -m "Update profile cards" || exit 0
+          git push
