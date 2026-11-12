@@ -1,91 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-label="Hank Emmanuel Nixon, backend and full-stack engineer">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="340" viewBox="0 0 1000 340" role="img" aria-label="Hank Nixon, software engineer and designer">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b1020"/>
-      <stop offset="50%" stop-color="#17143a">
-        <animate attributeName="stop-color" values="#17143a;#0f2a4a;#17143a" dur="10s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" stop-color="#0b1020"/>
-    </linearGradient>
-    <linearGradient id="name" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7dd3fc"/>
-      <stop offset="50%" stop-color="#a78bfa"/>
-      <stop offset="100%" stop-color="#f0abfc"/>
-    </linearGradient>
-    <radialGradient id="glowA" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glowB" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
-    </radialGradient>
-    <clipPath id="round"><rect width="1000" height="260" rx="18"/></clipPath>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#34343C"/>
+    </pattern>
+    <clipPath id="card"><rect width="1000" height="340" rx="16"/></clipPath>
+    <clipPath id="strip"><rect x="0" y="282" width="1000" height="58"/></clipPath>
   </defs>
+  <g clip-path="url(#card)" font-family="Outfit, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <rect width="1000" height="340" fill="#1D1D22"/>
+    <rect width="1000" height="340" fill="url(#dots)"/>
+    <rect x="0.5" y="0.5" width="999" height="339" rx="16" fill="none" stroke="#2E2E36"/>
 
-  <g clip-path="url(#round)">
-    <rect width="1000" height="260" fill="url(#bg)"/>
-
-    <!-- drifting glows -->
-    <circle r="170" fill="url(#glowA)">
-      <animate attributeName="cx" values="150;380;150" dur="12s" repeatCount="indefinite"/>
-      <animate attributeName="cy" values="60;190;60" dur="12s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="190" fill="url(#glowB)">
-      <animate attributeName="cx" values="860;640;860" dur="14s" repeatCount="indefinite"/>
-      <animate attributeName="cy" values="210;70;210" dur="14s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- floating code glyphs -->
-    <g font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="22" fill="#94a3b8">
-      <text x="70" y="230" opacity="0.0">&lt;/&gt;
-        <animate attributeName="y" values="240;40" dur="9s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.35;0" dur="9s" repeatCount="indefinite"/>
-      </text>
-      <text x="300" y="230" opacity="0.0">{ }
-        <animate attributeName="y" values="250;30" dur="11s" begin="2s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.3;0" dur="11s" begin="2s" repeatCount="indefinite"/>
-      </text>
-      <text x="720" y="230" opacity="0.0">SELECT *
-        <animate attributeName="y" values="250;30" dur="10s" begin="1s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.3;0" dur="10s" begin="1s" repeatCount="indefinite"/>
-      </text>
-      <text x="900" y="230" opacity="0.0">=&gt;
-        <animate attributeName="y" values="240;40" dur="8s" begin="3s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.35;0" dur="8s" begin="3s" repeatCount="indefinite"/>
-      </text>
-      <text x="520" y="230" opacity="0.0">async def
-        <animate attributeName="y" values="250;30" dur="12s" begin="4s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.28;0" dur="12s" begin="4s" repeatCount="indefinite"/>
-      </text>
+    <!-- availability pill -->
+    <g transform="translate(56,40)">
+      <rect width="262" height="34" rx="17" fill="none" stroke="#4ADE80" stroke-opacity="0.5"/>
+      <circle cx="20" cy="17" r="5" fill="#4ADE80">
+        <animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="36" y="22.5" font-size="15" fill="#4ADE80">Open to work · UAE / GCC</text>
     </g>
 
     <!-- name -->
-    <text x="500" y="112" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="url(#name)" opacity="0">
-      Hank Emmanuel Nixon
-      <animate attributeName="opacity" from="0" to="1" dur="1s" fill="freeze"/>
-      <animate attributeName="y" from="132" to="112" dur="1s" fill="freeze"/>
+    <text x="56" y="140" font-size="28" fill="#9CA3AF" opacity="0">Hello, I'm
+      <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.2s" fill="freeze"/>
+    </text>
+    <text x="52" y="226" font-size="104" font-weight="800" fill="#FFFFFF" opacity="0" letter-spacing="-2">Hank <tspan fill="#4ADE80">Nixon</tspan>
+      <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="0.4s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" from="0 16" to="0 0" dur="0.8s" begin="0.4s" fill="freeze"/>
     </text>
 
-    <!-- rotating role lines -->
-    <g font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="24" fill="#e2e8f0" text-anchor="middle">
-      <text x="500" y="168" opacity="0">Backend &amp; Full-Stack Engineer
-        <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.04;0.30;0.34;1" dur="12s" begin="1s" repeatCount="indefinite"/>
+    <!-- rotating roles (top right) -->
+    <g font-size="22" fill="#FFFFFF" text-anchor="end">
+      <text x="944" y="64" opacity="0">Software Engineer
+        <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.04;0.22;0.26;1" dur="12s" begin="1s" repeatCount="indefinite"/>
       </text>
-      <text x="500" y="168" opacity="0">Python · FastAPI · React · PostgreSQL
-        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.33;0.37;0.63;0.67;1" dur="12s" begin="1s" repeatCount="indefinite"/>
+      <text x="944" y="64" opacity="0">Backend &amp; Full-Stack Developer
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.25;0.29;0.47;0.51;1" dur="12s" begin="1s" repeatCount="indefinite"/>
       </text>
-      <text x="500" y="168" opacity="0">Building AI-enabled products
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.66;0.70;0.96;1" dur="12s" begin="1s" repeatCount="indefinite"/>
+      <text x="944" y="64" opacity="0">UI/UX &amp; Graphic Designer
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.50;0.54;0.72;0.76;1" dur="12s" begin="1s" repeatCount="indefinite"/>
+      </text>
+      <text x="944" y="64" opacity="0">Learning · Building · Evolving
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.75;0.79;0.97;1" dur="12s" begin="1s" repeatCount="indefinite"/>
       </text>
     </g>
+    <rect x="956" y="46" width="3" height="24" fill="#4ADE80">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
 
-    <!-- status line -->
-    <g font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">
-      <circle cx="338" cy="212" r="5" fill="#34d399">
-        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <text x="520" y="218">Open to roles · UAE / GCC · relocation OK</text>
+    <!-- tech marquee -->
+    <rect x="0" y="282" width="1000" height="58" fill="#25252B"/>
+    <line x1="0" y1="282.5" x2="1000" y2="282.5" stroke="#2E2E36"/>
+    <g clip-path="url(#strip)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="-1500 0" dur="38s" repeatCount="indefinite"/>
+        <text x="0" y="318" font-size="18" fill="#9CA3AF" textLength="1500" lengthAdjust="spacing" xml:space="preserve">Python  •  React.js  •  Next.js  •  FastAPI  •  TypeScript  •  Node.js  •  Java  •  JavaScript  •  PostgreSQL  •  Dart  •  Flutter  •  Product Design  •  Research  •  Development  •  </text>
+        <text x="1500" y="318" font-size="18" fill="#9CA3AF" textLength="1500" lengthAdjust="spacing" xml:space="preserve">Python  •  React.js  •  Next.js  •  FastAPI  •  TypeScript  •  Node.js  •  Java  •  JavaScript  •  PostgreSQL  •  Dart  •  Flutter  •  Product Design  •  Research  •  Development  •  </text>
+      </g>
     </g>
   </g>
 </svg>
