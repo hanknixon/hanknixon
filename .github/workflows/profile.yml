@@ -13,7 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-
+      - name: Check token
+        env:
+          HAS_PAT: ${{ secrets.GH_STATS_TOKEN != '' }}
+        run: echo "GH_STATS_TOKEN present = $HAS_PAT"
       # Stats cards. GH_STATS_TOKEN is optional: a classic PAT with `repo` and
       # `read:user` scopes adds private repos and org work (e.g. Zypher) to the numbers.
       # Without it, the workflow falls back to GITHUB_TOKEN (public activity only).
